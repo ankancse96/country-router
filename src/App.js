@@ -1,14 +1,16 @@
-import logo from './logo.svg';
+
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  
 } from "react-router-dom";
 import './App.css';
 import Home from './components/Home/Home';
 import NotFound from './components/Home/NotFound/NotFound';
 import CountryDetails from './components/Home/CountryDetails/CountryDetails';
+
+import Cardjs from "./components/Card/Card";
 
 function App() {
   return (
@@ -22,6 +24,9 @@ function App() {
         </Route>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route  path="/card">
+          <Cardjs />
         </Route>
         <Route path="*">
             <NotFound></NotFound>
